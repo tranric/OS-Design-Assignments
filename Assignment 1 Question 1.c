@@ -30,8 +30,6 @@ int ArmstrongNumber(int arg1, int arg2, int arg3){
 			println(armstrong);
 		}
 	}
-	
-	
 }
 //used to prevent messing with the for loop in armstrong number method
 //process is the number for the for loop
@@ -52,7 +50,3 @@ int processArmstrong(int process, int digit){
 	//returns the result at the end, converts back to int from the math.pow's double
 	return (int) output;
 }
-
-
-
-
