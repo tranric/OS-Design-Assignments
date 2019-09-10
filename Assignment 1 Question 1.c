@@ -13,5 +13,23 @@ int main(int argc, char *argv[]){
 	//TO DO: get numbers, get each character for each number 
 	//TO DO: calculations
 	
-	//test edit on kali
+	
+}
+
+//starts with arg1 instead of arg0 for less confusion since arg0 is the filename itself
+// arg1 is the armstrong number
+// arg2 is the second argument (low number from examples (0))
+// arg3 is the highest number (3rd arg from examples(600000))
+int ArmstrongNumber(int arg1, int arg2, int arg3){
+	
+	for(int i=arg2; i<){
+	//int arm = 
+	while(){
+		
+		
+	}
+		
+	}
+	
+	
 }
