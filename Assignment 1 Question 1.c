@@ -8,11 +8,11 @@
 
 //initalized variables for holding the arguments for the program
 //a for argument 1, b for arg 2, etc.
-int a=0, b=0, c=0;
+int arg1=argv[1], arg2=argv[2], arg3=argv[3];
 
 //main method
 int main(int argc, char *argv[]){
-	ArmStrongNumber((int)argv[1],(int)argv[2],(int)argv[3]);
+	ArmStrongNumber(arg1,arg2,arg3);
 }
 
 //starts with arg1 instead of arg0 for less confusion since arg0 is the filename itself
