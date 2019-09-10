@@ -12,14 +12,14 @@ int a=0, b=0, c=0;
 
 //main method
 int main(int argc, char *argv[]){
-	ArmStrongNumber(argv[1],argv[2],argv[3]);
+	ArmStrongNumber((int)argv[1],(int)argv[2],(int)argv[3]);
 }
 
 //starts with arg1 instead of arg0 for less confusion since arg0 is the filename itself
 // arg1 is the armstrong number
 // arg2 is the second argument (low number from examples (0))
 // arg3 is the highest number (3rd arg from examples(600000))
-int ArmstrongNumber(int arg1, int arg2, int arg3){
+int ArmStrongNumber(int arg1, int arg2, int arg3){
 	//runs through each number stops at the largest number which is arg3
 	for(int i=arg2; i <= arg3; i++){
 	//looks through each number and processes each number with the armstrong formula
@@ -27,7 +27,7 @@ int ArmstrongNumber(int arg1, int arg2, int arg3){
 	int armstrong = processArmstrong(i, arg1);
 	//prints armsrong number if found else does nothing
 		if(armstrong==i){
-			println(armstrong);
+			printf((%d), armstrong);
 		}
 	}
 }
