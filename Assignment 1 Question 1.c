@@ -8,9 +8,9 @@
 
 //main method
 int main(int argc, char *argv[]){
-	int arg1=argv[1];
-	int arg2=argv[2];
-	int arg3=argv[3];
+	int arg1=atoi(argv[1]);
+	int arg2=atoi(argv[2]);
+	int arg3=atoi(argv[3]);
 	
 	ArmStrongNumber(arg1, arg2, arg3);
 }
