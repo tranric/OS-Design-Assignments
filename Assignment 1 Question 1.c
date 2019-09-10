@@ -38,6 +38,8 @@ void ArmStrongNumber(int k, int p, int q){
 	//returns the armstrong number if found
 	int armstrong = processArmstrong(i, k);
 	//prints armsrong number if found else does nothing
+	
+		//skips 0 and 1 since they will always count as an armstrong no matter what
 		if (i == 0){
 			i=2
 		}
