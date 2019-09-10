@@ -27,7 +27,7 @@ int ArmStrongNumber(int arg1, int arg2, int arg3){
 	int armstrong = processArmstrong(i, arg1);
 	//prints armsrong number if found else does nothing
 		if(armstrong==i){
-			printf((%d), armstrong);
+			printf([%d], armstrong);
 		}
 	}
 }
