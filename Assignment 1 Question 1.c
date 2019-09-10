@@ -1,3 +1,5 @@
+//Question 1
+//Armstrong Function
 //Create by Richard Tran
 //Group Members: Daniel Saccheda and Richard Tran
 #include <stdio>
