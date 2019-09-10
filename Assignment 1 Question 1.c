@@ -6,31 +6,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-//main method
-int main(int argc, char *argv[]){
-	int arg1=atoi(argv[1]);
-	int arg2=atoi(argv[2]);
-	int arg3=atoi(argv[3]);
-	
-	ArmStrongNumber(arg1, arg2, arg3);
-}
 
-//starts with arg1 instead of arg0 for less confusion since arg0 is the filename itself
-// arg1 is the armstrong number
-// arg2 is the second argument (low number from examples (0))
-// arg3 is the highest number (3rd arg from examples(600000))
-int ArmStrongNumber(int arg1, int arg2, int arg3){
-	//runs through each number stops at the largest number which is arg3
-	for(int i=arg2; i <= arg3; i++){
-	//looks through each number and processes each number with the armstrong formula
-	//returns the armstrong number if found
-	int armstrong = processArmstrong(i, arg1);
-	//prints armsrong number if found else does nothing
-		if(armstrong==i){
-			printf("%d", armstrong);
-		}
-	}
-}
 //used to prevent messing with the for loop in armstrong number method
 //process is the number for the for loop
 //digit is the number of digits to look for from the arg1
@@ -49,4 +25,30 @@ int processArmstrong(int process, int digit){
 	}
 	//returns the result at the end, converts back to int from the math.pow's double
 	return (int) output;
+}
+
+//starts with arg1 instead of arg0 for less confusion since arg0 is the filename itself
+// arg1 is the armstrong number
+// arg2 is the second argument (low number from examples (0))
+// arg3 is the highest number (3rd arg from examples(600000))
+int ArmStrongNumber(int arg1, int arg2, int arg3){
+	//runs through each number stops at the largest number which is arg3
+	for(int i=arg2; i <= arg3; i++){
+	//looks through each number and processes each number with the armstrong formula
+	//returns the armstrong number if found
+	int armstrong = processArmstrong(i, arg1);
+	//prints armsrong number if found else does nothing
+		if(armstrong==i){
+			printf("%d", armstrong);
+		}
+	}
+}
+
+//main method
+int main(int argc, char *argv[]){
+	int arg1=atoi(argv[1]);
+	int arg2=atoi(argv[2]);
+	int arg3=atoi(argv[3]);
+	
+	ArmStrongNumber(arg1, arg2, arg3);
 }
