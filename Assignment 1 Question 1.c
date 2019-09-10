@@ -48,5 +48,10 @@ int ArmStrongNumber(int arg1, int arg2, int arg3){
 //main method
 void main(int argc, char *argv[]){
 	
-	ArmStrongNumber(argv[1], argv[2], argv[3]);
+	int arg1=argv[1];
+	int arg2=argv[1];
+	int arg3=argv[1];
+	
+	
+	ArmStrongNumber(arg1, arg2, arg3);
 }
