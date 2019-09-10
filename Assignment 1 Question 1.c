@@ -6,13 +6,13 @@
 #include <stdlib.h>
 #include <math.h>
 
-//initalized variables for holding the arguments for the program
-//a for argument 1, b for arg 2, etc.
-int arg1=argv[1], arg2=argv[2], arg3=argv[3];
-
 //main method
 int main(int argc, char *argv[]){
-	ArmStrongNumber(arg1,arg2,arg3);
+	//test arg issue
+	for (int i = 0; i < argc; ++i) 
+        cout << argv[i] << "\n";
+	
+	ArmStrongNumber(argv[1],argv[2],argv[3]);
 }
 
 //starts with arg1 instead of arg0 for less confusion since arg0 is the filename itself
