@@ -30,7 +30,9 @@ int main (int argc, char*argv[]) {
 //and removes the matching character and returns the new string output.
 char* rmchr(char* string, char* character) {
 	
+	//gets the length of the string as the maximum of the for loop to not break the program
 	 for (int i = 0; i < strlen(string); i++) {
+		 //if character is found remove character at location
 		  if (character[0] == string[i]) {
 			  
 			  
