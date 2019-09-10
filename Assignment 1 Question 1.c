@@ -20,7 +20,7 @@ int processArmstrong(int process, int digit){
 		//formula to process each digit of the current number for the armstrong formula
 		//and processes to the next digit in the number
 		double processnumber = pow(process % 10, digit);
-		output += digit;
+		output += processnumber;
 		process /= 10;
 	}
 	//returns the result at the end, converts back to int from the math.pow's double
@@ -31,7 +31,7 @@ int processArmstrong(int process, int digit){
 // arg1 is the armstrong number
 // arg2 is the second argument (low number from examples (0))
 // arg3 is the highest number (3rd arg from examples(600000))
-int ArmStrongNumber(int arg1, int arg2, int arg3){
+void ArmStrongNumber(int arg1, int arg2, int arg3){
 	//runs through each number stops at the largest number which is arg3
 	for(int i=arg2; i <= arg3; i++){
 	//looks through each number and processes each number with the armstrong formula
@@ -46,7 +46,7 @@ int ArmStrongNumber(int arg1, int arg2, int arg3){
 }
 
 //main method
-void main(int argc, char *argv[]){
+int main(int argc, char *argv[]){
 	
 	int arg1=atoi(argv[1]);
 	int arg2=atoi(argv[2]);
