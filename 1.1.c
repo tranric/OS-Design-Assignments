@@ -6,7 +6,9 @@
 #include <stdlib.h>
 #include <math.h>
 
-//test to fix pulling issues
+//run the compiler with -lm or it will not compile properly
+//on some machines since it won't include the math.h sometimes
+//eg. gcc 1.1.c -o 1.1.o -lm
 
 //used to prevent messing with the for loop in armstrong number method
 //process is the number for the for loop
