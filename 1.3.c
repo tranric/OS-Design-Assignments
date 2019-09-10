@@ -25,4 +25,19 @@ int main (int argc, char*argv[]) {
     return 0;
 }
 
+//remove character method
+//checks each character of the string for the second (3rd) argument for the same matching character.
+//and removes the matching character and returns the new string output.
+char* rmchr(char* string, char* character) {
+	
+	 for (int i = 0; i < strlen(string); i++) {
+		  if (character[0] == string[i]) {
+			  
+			  
+		  }
+		 
+	 }
+	
+}
+
 
