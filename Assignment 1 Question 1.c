@@ -27,17 +27,23 @@ int processArmstrong(int process, int digit){
 	return (int) output;
 }
 
-//starts with arg1 instead of arg0 for less confusion since arg0 is the filename itself
-// arg1 is the armstrong number
-// arg2 is the second argument (low number from examples (0))
-// arg3 is the highest number (3rd arg from examples(600000))
-void ArmStrongNumber(int arg1, int arg2, int arg3){
-	//runs through each number stops at the largest number which is arg3
-	for(int i=arg2; i <= arg3; i++){
+//starts with arg1(k) instead of arg0 for less confusion since arg0 is the filename itself
+// k is the armstrong number
+// p is the second argument (low number from examples (0))
+// q is the highest number (3rd arg from examples(600000))
+void ArmStrongNumber(int k, int p, int q){
+	//runs through each number stops at the largest number which is q
+	for(int i=p; i <= q; i++){
 	//looks through each number and processes each number with the armstrong formula
 	//returns the armstrong number if found
-	int armstrong = processArmstrong(i, arg1);
+	int armstrong = processArmstrong(i, k);
 	//prints armsrong number if found else does nothing
+		if (i == 0){
+			i=2
+		}
+		if (i == 1){
+			i=2
+		}
 		if(armstrong==i){
 			printf("%d \n", armstrong);
 			
@@ -45,13 +51,18 @@ void ArmStrongNumber(int arg1, int arg2, int arg3){
 	}
 }
 
+
+//starts with arg1(k) instead of arg0 for less confusion since arg0 is the filename itself
+// k is the armstrong number
+// p is the second argument (low number from examples (0))
+// q is the highest number (3rd arg from examples(600000))
 //main method
 int main(int argc, char *argv[]){
 	
-	int arg1=atoi(argv[1]);
-	int arg2=atoi(argv[2]);
-	int arg3=atoi(argv[3]);
+	int k=atoi(argv[1]);
+	int p=atoi(argv[2]);
+	int q=atoi(argv[3]);
 	
 	
-	ArmStrongNumber(arg1, arg2, arg3);
+	ArmStrongNumber(k, p, q);
 }
