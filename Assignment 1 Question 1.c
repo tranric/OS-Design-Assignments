@@ -41,10 +41,10 @@ void ArmStrongNumber(int k, int p, int q){
 	
 		//skips 0 and 1 since they will always count as an armstrong no matter what
 		if (i == 0){
-			i=2
+			i=2;
 		}
 		if (i == 1){
-			i=2
+			i=2;
 		}
 		if(armstrong==i){
 			printf("%d \n", armstrong);
