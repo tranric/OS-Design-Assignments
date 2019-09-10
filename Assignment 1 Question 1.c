@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <math.h>
 
+//test to fix pulling issues
 
 //used to prevent messing with the for loop in armstrong number method
 //process is the number for the for loop
