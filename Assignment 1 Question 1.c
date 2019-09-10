@@ -12,11 +12,7 @@ int a=0, b=0, c=0;
 
 //main method
 int main(int argc, char *argv[]){
-	//TO DO: get numbers, get each character for each number 
-	//TO DO: calculations
 	ArmStrongNumber(argv[1],argv[2],argv[3]);
-	
-	
 }
 
 //starts with arg1 instead of arg0 for less confusion since arg0 is the filename itself
