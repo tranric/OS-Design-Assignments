@@ -21,13 +21,11 @@ int main(int argc, char *argv[]){
 // arg2 is the second argument (low number from examples (0))
 // arg3 is the highest number (3rd arg from examples(600000))
 int ArmstrongNumber(int arg1, int arg2, int arg3){
-	
-	for(int i=arg2; i<){
-	//int arm = 
-	while(){
-		
-		
-	}
+	//runs through each number stops at the largest number which is arg3
+	for(int i=arg2; i <= arg3; i++){
+	//looks through each number and processes each number with the armstrong formula
+	//returns the armstrong number if found
+	int armstrong = processArmstrong(i, arg1);
 		
 	}
 	
