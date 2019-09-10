@@ -8,6 +8,21 @@ should be returned using an appropriate data type and printed to the command lin
 */
 
 //Group Members: Daniel Saccheda and Richard Tran
+
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#include <string.h>
+#include <ctype.h>
+
+
+
+//main just calls the method and returns the new string
+int main (int argc, char*argv[]) {
+
+    str = rmchr(argv[1], argv[2]);
+    printf("%s", str);
+
+    return 0;
+}
+
+
