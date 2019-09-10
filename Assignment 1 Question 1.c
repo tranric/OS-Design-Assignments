@@ -8,11 +8,11 @@
 
 //main method
 int main(int argc, char *argv[]){
-	//test arg issue
-	for (int i = 0; i < argc; ++i) 
-        cout << argv[i] << "\n";
+	int arg1=argv[1];
+	int arg2=argv[2];
+	int arg3=argv[3];
 	
-	ArmStrongNumber(argv[1],argv[2],argv[3]);
+	ArmStrongNumber(arg1, arg2, arg3);
 }
 
 //starts with arg1 instead of arg0 for less confusion since arg0 is the filename itself
