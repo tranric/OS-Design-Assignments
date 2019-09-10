@@ -1,5 +1,3 @@
-# Assignment
-Assignment Repo
-//Create by Richard Tran
-//Group Members: Daniel Saccheda and Richard Tran
-//added the new repo to work on code
+# Assignment 1 - OS design
+Assignment 1 Repo\n
+Group Members: Daniel Saccheda and Richard Tran
