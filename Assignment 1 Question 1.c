@@ -12,6 +12,7 @@ int a=0, b=0, c=0;
 int main(int argc, char *argv[]){
 	//TO DO: get numbers, get each character for each number 
 	//TO DO: calculations
+	ArmStrongNumber(argv[1],argv[2],argv[3]);
 	
 	
 }
@@ -26,7 +27,10 @@ int ArmstrongNumber(int arg1, int arg2, int arg3){
 	//looks through each number and processes each number with the armstrong formula
 	//returns the armstrong number if found
 	int armstrong = processArmstrong(i, arg1);
-		
+	//prints armsrong number if found else does nothing
+		if(armstrong==i){
+			println(armstrong);
+		}
 	}
 	
 	
