@@ -2,8 +2,8 @@
 //Armstrong Function
 //Create by Richard Tran
 //Group Members: Daniel Saccheda and Richard Tran
-#include <stdio>
-#include <stdlib>
+#include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 //initalized variables for holding the arguments for the program
