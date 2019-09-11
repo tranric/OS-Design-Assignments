@@ -13,7 +13,7 @@ int isprime(int a, int b){
 	if (a==0){
 		return b;
 	}
-	return isCoprime(b%a,a);
+	return isprime(b%a,a);
 }
 
 int phi(int a){
@@ -29,9 +29,7 @@ int phi(int a){
 
 
 int main(int argc, char *argv[]){
-	
-	
-	
+
 	
 	
 }
