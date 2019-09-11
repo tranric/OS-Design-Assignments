@@ -32,20 +32,21 @@ char* rmchr(char* string, char* character) {
 			  //takes source string and shift the string from the part it found the 
 			  //character over one. replacing all of the old letters with the next 
 			  //character over, repeats until end of character.
-			  //memmove(&string[i], &string[i + 1], strlen(string));
+			  memmove(&string[i], &string[i + 1], strlen(string));
 			  //due to the current i now a new letter it needs to be rechecked in the for loop
 			  //thus moving one back again to recheck before adding another ++ to i.
 			  //since it was shifted over to the left once.
 				//printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
 			    
-				
+				/*
 				for(int x=0; x <stringlength; x++){
 						string[i]=string[i+1];
 				}
+				*/
 				i--;
 				//string[i-1];
-				stringlength--;
-				printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
+				//stringlength--;
+				//printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
 				
 		  }
 	
@@ -57,7 +58,7 @@ char* rmchr(char* string, char* character) {
 }
 
 //main just calls the method and returns the new string
-int main(int argc, char *argv[]){
+int main(int argc, char** argv){
 
     char *str = rmchr(argv[1], argv[2]);
 	//added new line because it prints on same line as command is run.
