@@ -2,6 +2,7 @@
  * Euler-phi function
  * Daniel Sacchetto - Richard Tran
  * 2019-09-10
+ fix daniel's merge issue
  */
 
 #include <stdio.h>
