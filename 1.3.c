@@ -22,7 +22,7 @@ char* rmchr(char* string, char* character) {
 	//gets the length of the string as the maximum of the for loop to not break the program
 	
 	 for (int i = 0; i < strlen(string); i++) {
-		 printf("for loop: i is location: %d\n letter of string is:%s \n", i, string[i]);
+		 printf("for loop: i is location: %d\n letter of string is:%c \n", i, string[i]);
 		 
 		 //if character is found remove character at location
 		  if (character[0] == string[i]) {
@@ -37,9 +37,9 @@ char* rmchr(char* string, char* character) {
 			  //thus moving one back again to recheck before adding another ++ to i.
 			  //since it was shifted over to the left once.
 			  
-				printf("i is location: %d\n letter of string is:%s \n", i, string[i]);
+				printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
 			    i--;
-				printf("i is location: %d\n letter of string is:%s \n", i, string[i]);
+				printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
 		  }
 	
 	}
