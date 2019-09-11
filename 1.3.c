@@ -20,29 +20,36 @@ should be returned using an appropriate data type and printed to the command lin
 char* rmchr(char* string, char* character) {
 	
 	//gets the length of the string as the maximum of the for loop to not break the program
-	
-	 for (int i = 0; i < strlen(string); i++) {
-		 printf("for loop: i is location: %d\n letter of string is:%c \n", i, string[i]);
+	while(string != '\0'){
+	 //for (int i = 0; i < strlen(string); i++) {
+		 //printf("for loop: i is location: %d\n letter of string is:%c \n", i, string[i]);
 		 
 		 //if character is found remove character at location
-		  if (character[0] == string[i]) {
+		  //if (character[0] == string[i]) {
+			  if(character[0] == string){
 			  //https://www.tutorialspoint.com/c_standard_library/c_function_memmove.htm
 			  //how memmove works above (note for self ~richard)
 			  
 			  //takes source string and shift the string from the part it found the 
 			  //character over one. replacing all of the old letters with the next 
 			  //character over, repeats until end of character.
+			  for (int i = 0; i < strlen(string); i++) {
 			  memmove(&string[i], &string[i + 1], strlen(string));
+			  i--;
+			  }
 			  //due to the current i now a new letter it needs to be rechecked in the for loop
 			  //thus moving one back again to recheck before adding another ++ to i.
 			  //since it was shifted over to the left once.
-			  
-				printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
-			    i--;
-				printf("i is location: %d\n letter of string isC:%c \n", i, string[i]);
+			//	printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
+			   // 
+			//	printf("i is location: %d\n letter of string isC:%c \n", i, string[i]);
 				
-		  }
+		//  }
 	
+	}
+	if(string != '\0'){
+		++string;
+	}
 	}
 	 //original string is overwritten in the for loop returning the modified string (will need to change for 
 	 //question 4)
