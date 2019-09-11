@@ -25,8 +25,10 @@ char* rmchr(char* string, char* character) {
 	 for (int i = 0; i < strlen(string); i++) {
 		 //printf("for loop: i is location: %d\n letter of string is:%c \n", i, string[i]);
 		 char stringlocation = string[i];
+		 int a=atoi(character[0]);
+		 int b=atoi(stringlocation);
 		 //if character is found remove character at location
-		  if (atoi(character[0]) == atoi(stringlocation)) {
+		  if (a == b) {
 			  //https://www.tutorialspoint.com/c_standard_library/c_function_memmove.htm
 			  //how memmove works above (note for self ~richard)
 			  
