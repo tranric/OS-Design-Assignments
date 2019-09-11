@@ -20,7 +20,9 @@ should be returned using an appropriate data type and printed to the command lin
 char* rmchr(char* string, char* character) {
 	
 	//gets the length of the string as the maximum of the for loop to not break the program
+	
 	 for (int i = 0; i < strlen(string); i++) {
+		 
 		 //if character is found remove character at location
 		  if (character[0] == string[i]) {
 			  //https://www.tutorialspoint.com/c_standard_library/c_function_memmove.htm
@@ -33,11 +35,11 @@ char* rmchr(char* string, char* character) {
 			  //due to the current i now a new letter it needs to be rechecked in the for loop
 			  //thus moving one back again to recheck before adding another ++ to i.
 			  //since it was shifted over to the left once.
-			  printf("test if statement\n");
-			    
+			    i--;
+				i--;
 		  }
-		 
-	 }
+	
+	}
 	 //original string is overwritten in the for loop returning the modified string (will need to change for 
 	 //question 4)
 	 return string;	
