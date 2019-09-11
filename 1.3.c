@@ -18,10 +18,10 @@ should be returned using an appropriate data type and printed to the command lin
 //checks each character of the string for the second (3rd) argument for the same matching character.
 //and removes the matching character and returns the new string output.
 char* rmchr(char* string, char* character) {
-	
+	int stringlength = strlen(string);
 	//gets the length of the string as the maximum of the for loop to not break the program
 	while(string != '\0'){
-	 for (int i = 0; i < strlen(string); i++) {
+	 for (int i = 0; i < stringlength; i++) {
 		 printf("for loop: i is location: %d\n letter of string is:%c \n", i, string[i]);
 		 
 		 //if character is found remove character at location
