@@ -33,7 +33,7 @@ char* rmchr(char* string, char* character) {
 			  //due to the current i now a new letter it needs to be rechecked in the for loop
 			  //thus moving one back again to recheck before adding another ++ to i.
 			  //since it was shifted over to the left once.
-			  println("test if statement");
+			  printf("test if statement");
 			  i--;  
 		  }
 		 
