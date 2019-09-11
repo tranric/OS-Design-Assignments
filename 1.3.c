@@ -34,12 +34,23 @@ char* rmchr(char* string, char* character) {
 	 for (int i = 0; i < strlen(string); i++) {
 		 //if character is found remove character at location
 		  if (character[0] == string[i]) {
+			  //https://www.tutorialspoint.com/c_standard_library/c_function_memmove.htm
+			  //how memmove works above (note for self ~richard)
 			  
-			  
+			  //takes source string and shift the string from the part it found the 
+			  //character over one. replacing all of the old letters with the next 
+			  //character over, repeats until end of character.
+			  memmove(&string[i], &string[i + 1], strlen(string));
+			  //due to the current i now a new letter it needs to be rechecked in the for loop
+			  //thus moving one back again to recheck before adding another ++ to i.
+			  //since it was shifted over to the left once.
+			  i--;  
 		  }
 		 
 	 }
-	
+	 //original string is overwritten in the for loop returning the modified string (will need to change for 
+	 //question 4)
+	 return string;	
 }
 
 
