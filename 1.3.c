@@ -39,7 +39,9 @@ char* rmchr(char* string, char* character) {
 			  
 				printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
 			    i--;
-				printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
+				fflush()
+				printf("i is location: %d\n letter of string isC:%c \n", i, string[i]);
+				
 		  }
 	
 	}
