@@ -33,8 +33,8 @@ char* rmchr(char* string, char* character) {
 			  //due to the current i now a new letter it needs to be rechecked in the for loop
 			  //thus moving one back again to recheck before adding another ++ to i.
 			  //since it was shifted over to the left once.
-			  printf("test if statement");
-			  i--;  
+			  printf("test if statement\n");
+			    
 		  }
 		 
 	 }
@@ -47,7 +47,8 @@ char* rmchr(char* string, char* character) {
 int main(int argc, char *argv[]){
 
     char *str = rmchr(argv[1], argv[2]);
-    printf("%s", str);
+	//added new line because it prints on same line as command is run.
+    printf("\n%s", str);
 
     return 0;
 }
