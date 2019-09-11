@@ -21,12 +21,12 @@ char* rmchr(char* string, char* character) {
 	//int stringlength = strlen(string);
 	//gets the length of the string as the maximum of the for loop to not break the program
 	//while(string != '\0'){
-		jumppoint:
+		//jumppoint:
 	 for (int i = 0; i < strlen(string); i++) {
 		 //printf("for loop: i is location: %d\n letter of string is:%c \n", i, string[i]);
 		 
 		 //if character is found remove character at location
-		  if (character[0] == string[i]) {
+		  if (atoi(character[0]) == atoi(string[i])) {
 			  //https://www.tutorialspoint.com/c_standard_library/c_function_memmove.htm
 			  //how memmove works above (note for self ~richard)
 			  
@@ -48,7 +48,7 @@ char* rmchr(char* string, char* character) {
 				//string[i-1];
 				//stringlength--;
 				//printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
-				goto jumppoint;
+				//goto jumppoint;
 		 }
 	
 	}
