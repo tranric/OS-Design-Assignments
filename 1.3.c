@@ -36,8 +36,9 @@ char* rmchr(char* string, char* character) {
 			  //due to the current i now a new letter it needs to be rechecked in the for loop
 			  //thus moving one back again to recheck before adding another ++ to i.
 			  //since it was shifted over to the left once.
-				printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
+				//printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
 			    i--;
+				stringlength--;
 				printf("i is location: %d\n letter of string isC:%c \n", i, string[i]);
 				
 		  }
