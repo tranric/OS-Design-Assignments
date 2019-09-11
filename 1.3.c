@@ -45,7 +45,7 @@ char* rmchr(char* string, char* character) {
 }
 
 //main just calls the method and returns the new string
-int main (int argc, char *argv[]) {
+int main(int argc, char *argv[]){
 
     str = rmchr(argv[1], argv[2]);
     printf("%s", str);
