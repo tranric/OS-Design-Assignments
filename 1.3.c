@@ -38,8 +38,8 @@ char* rmchr(char* string, char* character) {
 			  //since it was shifted over to the left once.
 				//printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
 			    i--;
-				stringlength--;
-				printf("i is location: %d\n letter of string isC:%c \n", i, string[i]);
+				//stringlength--;
+				printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
 				
 		  }
 	
