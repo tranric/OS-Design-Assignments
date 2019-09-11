@@ -16,15 +16,6 @@ should be returned using an appropriate data type and printed to the command lin
 
 
 
-//main just calls the method and returns the new string
-int main (int argc, char*argv[]) {
-
-    str = rmchr(argv[1], argv[2]);
-    printf("%s", str);
-
-    return 0;
-}
-
 //remove character method
 //checks each character of the string for the second (3rd) argument for the same matching character.
 //and removes the matching character and returns the new string output.
@@ -51,6 +42,18 @@ char* rmchr(char* string, char* character) {
 	 //original string is overwritten in the for loop returning the modified string (will need to change for 
 	 //question 4)
 	 return string;	
+}
+
+
+
+
+//main just calls the method and returns the new string
+int main (int argc, char*argv[]) {
+
+    str = rmchr(argv[1], argv[2]);
+    printf("%s", str);
+
+    return 0;
 }
 
 
