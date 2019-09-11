@@ -20,7 +20,7 @@ should be returned using an appropriate data type and printed to the command lin
 char* rmchr(char* string, char* character) {
 	int stringlength = strlen(string);
 	//gets the length of the string as the maximum of the for loop to not break the program
-	while(string != '\0'){
+	//while(string != '\0'){
 	 for (int i = 0; i < stringlength; i++) {
 		 printf("for loop: i is location: %d\n letter of string is:%c \n", i, string[i]);
 		 
@@ -43,7 +43,7 @@ char* rmchr(char* string, char* character) {
 		  }
 	
 	}
-	}
+	//}
 	 //original string is overwritten in the for loop returning the modified string (will need to change for 
 	 //question 4)
 	 return string;	
