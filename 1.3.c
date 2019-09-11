@@ -39,7 +39,7 @@ char* rmchr(char* string, char* character) {
 			  
 				printf("i is location: %d\n letter of string is:%s \n", i, string[i]);
 			    i--;
-				printf("i is location: %d\n letter of string is:%s \n", i, string[i])
+				printf("i is location: %d\n letter of string is:%s \n", i, string[i]);
 		  }
 	
 	}
