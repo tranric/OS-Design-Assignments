@@ -23,7 +23,7 @@ char* rmchr(char* string, char* character) {
 	//while(string != '\0'){
 	 for (int i = 0; i < strlen(string); i++) {
 		 //printf("for loop: i is location: %d\n letter of string is:%c \n", i, string[i]);
-		 
+		 jumppoint;
 		 //if character is found remove character at location
 		  if (character[0] == string[i]) {
 			  //https://www.tutorialspoint.com/c_standard_library/c_function_memmove.htm
@@ -47,7 +47,7 @@ char* rmchr(char* string, char* character) {
 				//string[i-1];
 				//stringlength--;
 				//printf("i is location: %d\n letter of string is:%c \n", i, string[i]);
-				
+				goto jumppoint;
 		  }
 	
 	}
@@ -62,7 +62,7 @@ int main(int argc, char** argv){
 
     char *str = rmchr(argv[1], argv[2]);
 	//added new line because it prints on same line as command is run.
-    printf("\n%s\n", str);
+    printf("%s\n", str);
 
     return 0;
 }
