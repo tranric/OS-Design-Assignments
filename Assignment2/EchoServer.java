@@ -3,7 +3,10 @@ import java.net.*;
 
 public class EchoServer {
  
-
+ private ServerSocket server;
+ private Socket client;
+ private int port = 8998;
+ private boolean connection = true;
  
  public EchoServer () {
   try {
