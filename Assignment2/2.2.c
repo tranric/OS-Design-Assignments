@@ -43,6 +43,16 @@ int main (int argc, char *argv[]) {
 	  
 		
 	  default:
+	    
+		close(pipeFds[0]);
+		
+        int fileInDesc = open(src, O_RDONLY); 
+		
+        ssize_t num_bytes = read(fileInDesc, buffer, sizeof(buffer));
+		
+        write(pipeFds[1], buffer, num_bytes);
+		
+        close(pipeFds[1]);
 	  
 
 	  
