@@ -10,5 +10,12 @@
 
 int main (int argc, char *argv[]) {
 	
+	//usage ask requirement
+	 if (argc != 3) {
+      perror("Usage: filecopy.out [source] [destination]. \n");
+      exit(1);
+    }
+
+	
 	
 }
