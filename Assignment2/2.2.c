@@ -26,6 +26,8 @@ int main (int argc, char *argv[]) {
 	 switch(fork()) {
 
       case -1:
+		printf("Error forking child process. %s\n", strerror(errno));
+		exit(1);
 
       case 0: 
 		
