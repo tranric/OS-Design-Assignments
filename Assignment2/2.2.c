@@ -23,6 +23,15 @@ int main (int argc, char *argv[]) {
 	char* src = argv[1];
     char* dst = argv[2];
 	
+	 switch(fork()) {
+
+      case -1:
+
+      case 0: 
+		
+	  default:
+
+    }
 
     return 0;
 	
