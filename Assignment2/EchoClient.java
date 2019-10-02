@@ -1,3 +1,5 @@
+/*Assignment 2 Question 1 Richard Tran / Daniel Sacchetto*/
+
 import java.io.*;
 import java.net.*;
 import java.util.*;
