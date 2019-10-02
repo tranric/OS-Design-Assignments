@@ -15,7 +15,15 @@ int main (int argc, char *argv[]) {
       perror("Usage: filecopy.out [source] [destination]. \n");
       exit(1);
     }
-
 	
+	int pipeFds[2]; 
+    char buffer1[100];
+    char buffer2[100];
+	
+	char* src = argv[1];
+    char* dst = argv[2];
+	
+
+    return 0;
 	
 }
