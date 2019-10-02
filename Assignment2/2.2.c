@@ -30,9 +30,22 @@ int main (int argc, char *argv[]) {
 		exit(1);
 
       case 0: 
+	  
+		close(pipeFds[1]); 
+	  
+        ssize_t num_bytes_child = read(pipeFds[0], buffer2, sizeof(buffer2));
+		
+        close(pipeFds[0]);  
+		
+        int targetDesc = open(dst, O_CREAT | O_WRONLY);
+		
+        write(targetDesc, buffer2, num_bytes_child);
+	  
 		
 	  default:
+	  
 
+	  
     }
 
     return 0;
