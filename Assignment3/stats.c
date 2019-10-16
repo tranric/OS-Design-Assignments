@@ -109,6 +109,11 @@ int main(int argc, char *argv[])
     pthread_join(thread2,NULL);    
     pthread_join(thread3,NULL);
 	
+	//prints the results same as report standards
+	printf("Average value is\n%d\n", avg);
+    printf("Minimum value is\n%d\n", min);
+    printf("Maximum value is\n%d\n", max);
+	
 }
 
 
