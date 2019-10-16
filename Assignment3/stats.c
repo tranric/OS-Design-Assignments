@@ -33,6 +33,10 @@ void *findMax(void *arg){
 	//but to be used to compare instead. 
 	int *pVal = (int *) arg;
 	
+	//just like average runs through all of the elements in the argument list
+	for(int i = 0; i < count; i++){
+		
+	}
 	
 }
 
@@ -40,6 +44,10 @@ void *findMin(void *arg){
 		//same as max/average function
 	int *pVal = (int *) arg;
 	
+	//just like average runs through all of the elements in the argument list
+	for(int i = 0; i < count; i++){
+	
+	}
 	
 	
 }
