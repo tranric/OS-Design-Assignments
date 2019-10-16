@@ -6,9 +6,9 @@
 
 
 int c = 0;
-int avg;
-int max;
-int min;
+int avg = 0;
+int max = 0;
+int min = 0;
 
 void *findAvg(void *arg){
 	
