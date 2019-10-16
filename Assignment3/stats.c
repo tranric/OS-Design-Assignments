@@ -114,6 +114,8 @@ int main(int argc, char *argv[])
     printf("Minimum value is\n%d\n", min);
     printf("Maximum value is\n%d\n", max);
 	
+	exit(0);
+	
 }
 
 
