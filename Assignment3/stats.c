@@ -20,11 +20,11 @@ void *findAvg(void *arg){
     int total = 0;
 	
 	//the actual function to add all of the argument's numbers together
-    for(int i = 0; i < count; i++){
+    for(int i = 0; i < c; i++){
 		total = total + pVal[i]
 	}
 	//as per mean, total divided by number of elements
-	avg = (total/count);
+	avg = (total/c);
 	
 }
 
@@ -33,20 +33,36 @@ void *findMax(void *arg){
 	//but to be used to compare instead. 
 	int *pVal = (int *) arg;
 	
+	//saves first value to max for if statement to compare to in for loop
+	max = pVal[0];
+	
 	//just like average runs through all of the elements in the argument list
-	for(int i = 0; i < count; i++){
-		
+	for(int i = 0; i < c; i++){
+		//the if statement to compare the saved maximum value with the next argument
+		//if new value is larger it replaces the spot in the max variable.
+		if(pVal[i] > max){
+		max = pVal[i];
+		}
 	}
 	
 }
 
 void *findMin(void *arg){
-		//same as max/average function
+	
+	//same as max/average function
 	int *pVal = (int *) arg;
 	
-	//just like average runs through all of the elements in the argument list
-	for(int i = 0; i < count; i++){
+	//saves first value to min for if statement to compare to in for loop
+	min = pVal[0];
 	
+	//just like average runs through all of the elements in the argument list
+	for(int i = 0; i < c; i++){
+		
+		//the if statement to compare the saved maximum value with the next argument
+		//if new value is larger it replaces the spot in the min variable. same as max execpt flipping the condition.
+		if(pVal[i] < min){
+		min = pVal[i];
+		}
 	}
 	
 	
