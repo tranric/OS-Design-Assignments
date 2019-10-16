@@ -77,11 +77,19 @@ int main(int argc, char *argv[])
     pthread_t thread2;
     pthread_t thread3;
 	
-	//gets the arguments and saves it into a variable -1 due to
+	//The array that holds the value, gets size from the number of arguments / argc / argument count -1 due to 
 	//calling the file itself being included in arguments to be removed.
 	int *numofargs = (int*)malloc((argc-1)*sizeof(int));
 	
-	
+
+	for(int i = 1; i < argc; i++){
+		//gets the arguments and saves it into a variable -1 due to
+	//calling the file itself being included in arguments to be removed.
+        numofargs[i-1] = strtol(argv[i],NULL,0);
+		//adds it to c which is the counter for the other functions.
+        c++;
+        
+    }
 	
 }
 
