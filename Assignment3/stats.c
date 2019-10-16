@@ -10,7 +10,16 @@ int avg = 0;
 int max = 0;
 int min = 0;
 
+//calculates the average of the numbers
 void *findAvg(void *arg){
+	//saves each value of each argument to be added
+	//to the total to calculate the average
+	int *pVal = (int *) arg;
+	
+	//the total number to be added together for each int to be added into.
+    int total = 0;
+	
+
 	
 	
 }
