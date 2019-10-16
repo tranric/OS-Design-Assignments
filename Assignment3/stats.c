@@ -29,12 +29,18 @@ void *findAvg(void *arg){
 }
 
 void *findMax(void *arg){
-	
+	//same as average function, to get each argument to be saved as a var
+	//but to be used to compare instead. 
+	int *pVal = (int *) arg;
 	
 	
 }
 
 void *findMin(void *arg){
+		//same as max/average function
+	int *pVal = (int *) arg;
+	
+	
 	
 }
 
