@@ -26,6 +26,9 @@ void *findAvg(void *arg){
 	//as per mean, total divided by number of elements
 	avg = (total/c);
 	
+	
+	//need to close the created thread when method is called
+	pthread_exit(0);
 }
 
 void *findMax(void *arg){
@@ -45,6 +48,8 @@ void *findMax(void *arg){
 		}
 	}
 	
+	//need to close the created thread when method is called
+	pthread_exit(0);
 }
 
 void *findMin(void *arg){
@@ -65,6 +70,8 @@ void *findMin(void *arg){
 		}
 	}
 	
+	//need to close the created thread when method is called
+	pthread_exit(0);
 	
 }
 
@@ -92,10 +99,15 @@ int main(int argc, char *argv[])
         c++;
         
     }
-	
+	//creates the threads and calls the cooresponding method for each thread.
 	pthread_create(&thread1,NULL,findAvg,(void*)numofargs);
     pthread_create(&thread2,NULL,findMax,(void*)numofargs);
     pthread_create(&thread3,NULL,findMin,(void*)numofargs);
+	
+	//joins all of the threads together. 
+	pthread_join(thread1,NULL);
+    pthread_join(thread2,NULL);    
+    pthread_join(thread3,NULL);
 	
 }
 
