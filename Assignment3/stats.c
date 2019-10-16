@@ -5,6 +5,11 @@
 #include <pthread.h>
 
 
+int c = 0;
+int avg;
+int max;
+int min;
+
 void *findAvg(void *arg){
 	
 	
