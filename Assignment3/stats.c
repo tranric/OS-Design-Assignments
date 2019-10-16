@@ -83,13 +83,19 @@ int main(int argc, char *argv[])
 	
 
 	for(int i = 1; i < argc; i++){
+		
 		//gets the arguments and saves it into a variable -1 due to
-	//calling the file itself being included in arguments to be removed.
+		//calling the file itself being included in arguments to be removed.
         numofargs[i-1] = strtol(argv[i],NULL,0);
+		
 		//adds it to c which is the counter for the other functions.
         c++;
         
     }
+	
+	pthread_create(&thread1,NULL,findAvg,(void*)numofargs);
+    pthread_create(&thread2,NULL,findMax,(void*)numofargs);
+    pthread_create(&thread3,NULL,findMin,(void*)numofargs);
 	
 }
 
