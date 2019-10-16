@@ -19,8 +19,12 @@ void *findAvg(void *arg){
 	//the total number to be added together for each int to be added into.
     int total = 0;
 	
-
-	
+	//the actual function to add all of the argument's numbers together
+    for(int i = 0; i < count; i++){
+		total = total + pVal[i]
+	}
+	//as per mean, total divided by number of elements
+	avg = (total/count);
 	
 }
 
