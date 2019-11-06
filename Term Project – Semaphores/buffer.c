@@ -20,7 +20,7 @@ void *producer(void *param) {
 		/* generate a random number */
 		item = rand();
 		if (insert item(item)){
-			fprintf("error cannot add item");
+			printf("error cannot add item");
 		}
 		else{
 			printf("Producer produced %d\n",item);
@@ -34,7 +34,7 @@ void *consumer(void *param) {
 		/* sleep for a random period of time */
 		sleep(rand() % 3 + 1);
 		if (remove item(&item)){
-			fprintf("error cannot remove item");
+			printf("error cannot remove item");
 		}
 		else{
 			printf("Consumer consumed %d\n",item);
