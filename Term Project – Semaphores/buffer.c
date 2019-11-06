@@ -96,6 +96,10 @@ int main(int argc, char *argv[]) {
 	}
 	
 	//number of consumer threads - create consumer threads
+	for(int y=0; y<prodarg; y++){
+		pthread_create(&consthread[y], NULL, consumer, NULL);
+	}
+	
 	
 	//sleeps timer until termination.
 	sleep(terminatesleeparg);
