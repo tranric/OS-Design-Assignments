@@ -50,7 +50,7 @@ int insert item(buffer item item)
 		return 0; //success added to buffer
 	}
 	else{
-		return -1 //error = buffer full 
+		return -1; //error = buffer full 
 	}
 	/* insert item into buffer
 	return 0 if successful, otherwise
