@@ -81,13 +81,21 @@ int main(int argc, char *argv[]) {
 	int consarg = atoi(argv[3]);
 	//ensure the counter/current buffer spot is set to 0 to count the buffer properly
 	CBuf = 0;
+	
+	//for my own notes - richard tran:
+	//https://www.cs.cmu.edu/afs/cs/academic/class/15492-f07/www/pthreads.html
+	
+	
 	//creation of the threads for the producer and consumer threads
 	pthread_t prodthread[prodarg];
 	pthread_t consthread[consarg];
 	
-	//number of producer threads 
+	//number of producer threads - create producer threads
+	for(int x=0; x<prodarg; x++){
+		pthread_create(&prodthread[x], NULL, producer, NULL);
+	}
 	
-	//number of consumer threads
+	//number of consumer threads - create consumer threads
 	
 	//sleeps timer until termination.
 	sleep(terminatesleeparg);
