@@ -85,6 +85,16 @@ int main(int argc, char *argv[]) {
 	pthread_t prodthread[prodarg];
 	pthread_t consthread[consarg];
 	
+	//number of producer threads 
+	
+	//number of consumer threads
+	
+	//sleeps timer until termination.
+	sleep(terminatesleeparg);
+	//exit
+	return 0;
+	
+	
 	/* 1. Get command line arguments argv[1],argv[2],argv[3]
 	*/
 	/* 2. Initialize buffer */
