@@ -23,7 +23,7 @@ void *producer(void *param) {
 			fprintf("error cannot add item");
 		}
 		else{
-			printf("producer produced %d\n",item);
+			printf("Producer produced %d\n",item);
 		}
 	}
 }
@@ -37,7 +37,7 @@ void *consumer(void *param) {
 			fprintf("error cannot remove item");
 		}
 		else{
-			printf("consumer consumed %d\n",item);
+			printf("Consumer consumed %d\n",item);
 		}
 	}
 }
@@ -75,6 +75,15 @@ int remove item(buffer item *item) {
 }
 
 int main(int argc, char *argv[]) {
+	//saves each argument into a varaible to process
+	int terminatesleeparg = atoi(argv[1]);
+	int prodarg = atoi(argv[2]);
+	int consarg = atoi(argv[3]);
+	//ensure the counter/current buffer spot is set to 0 to count the buffer properly
+	CBuf = 0;
+	//creation of the threads for the producer and consumer threads
+	pthread_t prodthread[prodarg];
+	pthread_t consthread[consarg];
 	
 	/* 1. Get command line arguments argv[1],argv[2],argv[3]
 	*/
