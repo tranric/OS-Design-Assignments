@@ -14,7 +14,7 @@ void *producer(void *param) {
 	
 	buffer_item item;
 	
-	while (true) {
+	while (1) {
 		/* sleep for a random period of time */
 		sleep(rand() % 3 + 1);
 		/* generate a random number */
@@ -30,7 +30,7 @@ void *producer(void *param) {
 void *consumer(void *param) {
 	buffer_item item;
 	
-	while (true) {
+	while (1) {
 		/* sleep for a random period of time */
 		sleep(rand() % 3 + 1);
 		if (remove item(&item)){
