@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <pthread.h>
 #include <semaphore.h>
-
-#define RAND_DIVISOR 100000000
 #define TRUE 1
 
 typedef int buffer_item;
@@ -50,7 +48,7 @@ void *producer(void *param) {
 
    while(TRUE) {
       /* sleep for a random period of time */
-      int rNum = rand() / RAND_DIVISOR;
+      int rNum = rand() % 3 + 1;
       sleep(rNum);
 
       /* generate a random number */
@@ -65,7 +63,7 @@ void *producer(void *param) {
          fprintf(stderr, " Producer report error condition\n");
       }
       else {
-         printf("producer produced %d\n", item);
+         printf("Producer produced %d\n", item);
       }
       /* release the mutex lock */
       pthread_mutex_unlock(&mutex);
@@ -80,7 +78,7 @@ void *consumer(void *param) {
 
    while(TRUE) {
       /* sleep for a random period of time */
-      int rNum = rand() / RAND_DIVISOR;
+      int rNum = rand() % 3 + 1;
       sleep(rNum);
 
       /* aquire the full lock */
@@ -91,7 +89,7 @@ void *consumer(void *param) {
          fprintf(stderr, "Consumer report error condition\n");
       }
       else {
-         printf("consumer consumed %d\n", item);
+         printf("Consumer consumed %d\n", item);
       }
       /* release the mutex lock */
       pthread_mutex_unlock(&mutex);
@@ -130,11 +128,11 @@ int remove_item(buffer_item *item) {
 
 int main(int argc, char *argv[]) {
    /* Loop counter */
-   int i;
+   int i=0;
 
    /* Verify the correct number of arguments were passed in */
    if(argc != 4) {
-      fprintf(stderr, "USAGE:./main.out <INT> <INT> <INT>\n");
+      fprintf(stderr, "USAGE:./version2.out arg1 arg2 arg3");
    }
 
    int mainSleepTime = atoi(argv[1]); /* Time in seconds for main to sleep */
@@ -156,10 +154,8 @@ int main(int argc, char *argv[]) {
       pthread_create(&tid,&attr,consumer,NULL);
    }
 
-   /* Sleep for the specified amount of time in milliseconds */
+   /* Sleep for the specified amount of time */
    sleep(mainSleepTime);
 
-   /* Exit the program */
-   printf("Exit the program\n");
    exit(0);
 }
